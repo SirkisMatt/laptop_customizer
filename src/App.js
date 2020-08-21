@@ -101,10 +101,18 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
+          <LaptopBuild 
+          features={this.props.features}
+          />
+          
           <form className="main__form">
             <h2>Customize your laptop</h2>
             {features}
           </form>
+          
+          <AddAndSum 
+          
+          />
           <section className="main__summary">
             <h2>Your cart</h2>
             {summary}
@@ -115,6 +123,7 @@ class App extends Component {
               </div>
             </div>
           </section>
+
         </main>
       </div>
     );

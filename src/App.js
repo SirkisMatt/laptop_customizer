@@ -9,10 +9,6 @@ import slugify from 'slugify';
 
 import './App.css';
 
-// This object will allow us to
-// easily convert numbers into US dollar values
-
-
 class App extends Component {
   constructor(props){
   super(props);
@@ -53,20 +49,13 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          
-             <LaptopBuild 
+            <LaptopBuild 
               selected={this.state.selected}
               updateFeature={(feature, item) => this.updateFeature(feature, item)}
-              />
-          
-          
-          
-       
+            />
             <AddAndSum 
             selected={this.state.selected}
             />
-          
-
         </main>
       </div>
     );

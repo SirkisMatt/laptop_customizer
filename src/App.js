@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import STORE from './store'
+
 import LaptopBuild from './LaptopBuild/LaptopBuild';
 import AddAndSum from './AddAndSum/AddAndSum';
 
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from 'slugify';
+
+
 
 import './App.css';
 

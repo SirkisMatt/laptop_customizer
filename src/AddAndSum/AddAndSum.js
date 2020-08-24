@@ -2,18 +2,30 @@ import React, { Component } from 'react'
 import LaptopAdd from '../LaptopAdd/LaptopAdd'
 import Total from '../Total/Total'
 
+
 class AddAndSum extends Component {
     render () {
+        const summary = Object.keys(this.props.selected).map((feature, idx) => {
+            const featureHash = feature + '-' + idx;
+      
+            return (
+            <LaptopAdd 
+            key={featureHash}
+            feature={feature}
+            selectedOption={this.props.selected[feature]}
+            />
+            );
+          });
+
         return (
-            <div className="main__summary">
-               <h2>Your cart</h2>
-               <div className="summary__total">
-                <LaptopAdd 
+            <section className="main__summary">
+                <h2>Your cart</h2>
+                {summary}
+                <Total 
                 selected={this.props.selected}
                 />
-                <Total selected={this.props.selected}/>
-               </div>
-            </div>
+                
+            </section>
         );
     }
 }

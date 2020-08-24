@@ -23,10 +23,10 @@ class LaptopBuild extends Component {
               );
         });
         return (
-            <div className="main__form">
-            <h2>Customize your laptop</h2>
-            {laptopBuild}
-            </div>
+            <form className="main__form">
+                <h2>Customize your laptop</h2>
+                {laptopBuild}
+            </form>
         )
 
     }

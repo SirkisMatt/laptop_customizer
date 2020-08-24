@@ -15,7 +15,7 @@ class Total extends Component {
           );
         return (
             <div className="summary__total">
-                <h3 className="summary__total__label">Total</h3>
+                <div className="summary__total__label">Total</div>
                 <div className="summary__total__value">{USCurrencyFormat.format(total)}</div>
             </div>
         );
